@@ -1,0 +1,9 @@
+{%- macro render_sub_form(subform, index) %}
+    <div id="lap-{{ index }}-form" class="{% if index != '_' %}subform{% else %}is-hidden{% endif %}" data-index="{{ index }}">
+        {% if subform.year %}
+            {{subform.year.label}}
+        {% endif %}
+        <a class="remove" href="#">x</a>
+        <hr/>
+    </div>
+{%- endmacro %}
